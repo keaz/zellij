@@ -1,0 +1,15 @@
+layout {
+  tab {
+    pane split_direction="vertical"  {
+      pane name="Development" size="80%" cwd="$HOME/Development" focus=true {
+        plugin location="zellij:compact-bar"
+      }
+              
+      pane size="20%" {
+      }
+    }
+  }
+  tab name="Editor" cwd="$HOME/Development"{
+      pane name="Editor"  borderless=true
+  }
+}
