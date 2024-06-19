@@ -28,7 +28,7 @@ layout {
           }
 
           pane command="mvn" {
-              args "clean" "install"  
+              args "spring-boot:run" 
               focus true
           }
       }
