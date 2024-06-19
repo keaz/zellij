@@ -1,0 +1,39 @@
+
+
+layout {
+    tab name="Editor" focus=true {
+      pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+      }
+      pane split_direction="horizontal" command="nvim" {
+          args "."
+      }
+      pane size=2 borderless=true {
+          plugin location="zellij:status-bar"
+      }
+    }
+    tab name="Terminal" {
+      pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+      }
+      pane split_direction="vertical" {
+          pane split_direction="horizontal" size="30%" {
+            pane {
+               plugin location="zellij:strider"
+            }
+            
+            pane command="git" {
+               args "status"
+            }
+          }
+
+          pane command="mvn" {
+              args "spring-boot:run" 
+              focus true
+          }
+      }
+      pane size=2 borderless=true {
+          plugin location="zellij:status-bar"
+      }
+    }
+}
