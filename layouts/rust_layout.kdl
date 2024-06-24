@@ -19,11 +19,11 @@ layout {
           pane size="15%" {
               plugin location="zellij:strider"
           }
-          pane command="cargo" {
+          pane command="cargo" start_suspended=true {
               args "run"
               focus true
           }
-          pane command="cargo" {
+          pane command="cargo" start_suspended=true {
               args "test"
           }
       }
