@@ -27,7 +27,7 @@ layout {
             }
           }
 
-          pane command="mvn" {
+          pane command="mvn" start_suspended=true {
               args "clean" "install"  
               focus true
           }
